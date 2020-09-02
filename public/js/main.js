@@ -2,7 +2,7 @@ console.log('Client side script loaded');
 
 function fetchWeather(address) {
     return new Promise((resolve, reject) => {
-        fetch('http://localhost:3000/weather?address=' + address)
+        fetch('/weather?address=' + address)
             .then(response => response.json())
             .then(data => resolve(data))
             .catch(e => reject(e))
